@@ -157,6 +157,44 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: ftps 
+  annotations:
+    metallb.universe.tf/allow-shared-ip: buom01
+spec:
+  ports:
+  - name: ftp
+    protocol: TCP
+    port: 21
+    targetPort: 21
+  selector:
+    app: ftps
+  type: LoadBalancer
+  loadBalancerIP: 10.10.0.0
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ftps
+  labels:
+    app: ftps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ftps
+  template:
+    metadata:
+      labels:
+        app: ftps
+    spec:
+      containers:
+      - name: ftps
+        image: buom01/ftps
+        imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: mysql
   annotations:
     metallb.universe.tf/allow-shared-ip: buom01

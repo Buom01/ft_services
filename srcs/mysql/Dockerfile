@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3
 
 RUN apk add --no-cache mysql mysql-client
 RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
@@ -13,4 +13,4 @@ COPY mariadb-server.cnf /etc/my.cnf.d/mariadb-server.cnf
 USER mysql
 VOLUME /var/lib/mysql
 EXPOSE 3306
-CMD ["mysqld"]
+CMD mysqld

@@ -28,3 +28,12 @@ nav_order: 5
 - admin: another_secret
 - Buom_01: kFo$ep#MHl8Vib(DOzk@Z^Y3
 - Buom_02: UZJToMrlTddShcF3Z!7huFC&
+
+## FTPs
+Note: With only one openned port, it's should be in active mode.
+
+### Credentials
+- root: changed_password_42
+
+## Grafana credentials
+- admin: changed_password_42

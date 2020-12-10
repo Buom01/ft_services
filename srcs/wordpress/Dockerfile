@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3
 
 RUN apk add --no-cache nginx php7 php7-fpm php7-mysqli php7-json php7-opcache
 
@@ -10,4 +10,4 @@ COPY wordpress/ /var/www/
 COPY processes.sh /
 
 EXPOSE 5050
-CMD ["/processes.sh"] 
+CMD /processes.sh 

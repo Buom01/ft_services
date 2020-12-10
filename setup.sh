@@ -31,10 +31,10 @@ build nginx # + ssh access ??? # LoadBalancer
 build wordpress # LoadBalancer
 build phpmyadmin # LoadBalancer
 build grafana # LoadBalancer
-#ftps LoadBalancer
+build ftps # LoadBalancer
 
 build mysql # ClusterIP
-#influxdb ClusterIP
+build influxdb # ClusterIP
 
 echo "# Kubernetes"
 

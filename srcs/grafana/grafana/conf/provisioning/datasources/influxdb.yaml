@@ -1,0 +1,9 @@
+apiVersion: 1
+
+datasources:
+- name: Grafana's Influx
+  type: influxdb 
+  access: proxy 
+  url: influxdb:8086
+  database: grafana
+  isDefault: true

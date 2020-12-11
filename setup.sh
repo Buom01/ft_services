@@ -20,6 +20,10 @@ minikube status > /dev/null \
 		--driver docker \
 	|| panic
 
+minikube addons enable dashboard
+minikube addons enable default-storageclass
+minikube addons enable storage-provisioner
+
 echo "# Docker"
 
 eval $(minikube -p minikube docker-env) 
@@ -27,7 +31,7 @@ echo "## Testing Docker ..."
 docker info -f "Docker is ready" || panic
 
 echo "## Building containers ..."
-build nginx # + ssh access ??? # LoadBalancer
+build nginx # LoadBalancer
 build wordpress # LoadBalancer
 build phpmyadmin # LoadBalancer
 build grafana # LoadBalancer
@@ -59,7 +63,11 @@ echo "## Deploying containers ..."
 
 kubectl apply -f srcs/config.yaml || panic
 
-sleep 5
+echo "## Setting Service Accounts for API access"
+
+kubectl apply -f srcs/service-accounts.yaml
+
+echo "## Printing status"
 
 kubectl get services
 kubectl get deployments

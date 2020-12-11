@@ -171,6 +171,19 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 10.10.0.0
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ftps-volume
+spec:
+  storageClassName: ""
+  volumeName: ftps-volume
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -191,6 +204,13 @@ spec:
       - name: ftps
         image: buom01/ftps
         imagePullPolicy: Never
+        volumeMounts:
+        - mountPath: /var/ftp
+          name: ftps-volume
+      volumes:
+      - name: ftps-volume
+        persistentVolumeClaim:
+          claimName: ftps-volume
 ---
 apiVersion: v1
 kind: Service
@@ -267,3 +287,8 @@ spec:
       - name: influxdb
         image: buom01/influxdb
         imagePullPolicy: Never
+        env:
+        - name: NODE_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP

@@ -9,6 +9,7 @@ function run()
 
 # Process list and their prefix
 run "influxd -config /etc/influxdb.conf" "[$c[1m$c[96mINFLUX DB$c[0m] "
+run "telegraf --config /etc/telegraf/telegraf.conf" "[$c[1m$c[91mTELEGRAF $c[0m] "
 
 
 wait

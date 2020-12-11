@@ -6,12 +6,25 @@ panic ()
 	exit 1
 }
 
+docker_issue ()
+{
+	groups | grep docker && echo "You already seem in the docker group. Try to reboot." || echo "Missing Docker group detected !"
+	echo "Adding $(whoami) to the docker group. You will need to authenticate."
+	sudo usermod -aG docker $(whoami)
+	echo "Using a trick to avoid to reboot"
+	su - $(whoami) -c "$(pwd)/setup.sh"
+	exit
+}
+
 build ()
 {
 	echo "### Building $1 ..."
 	docker build srcs/$1 -t buom01/$1 || panic
 	echo ""
 }
+
+echo "# Testing Docker ..."
+docker ps > /dev/null && echo "Docker is working" || docker_issue
 
 echo "# Starting minikube ..."
 minikube status > /dev/null \
@@ -27,8 +40,6 @@ minikube addons enable storage-provisioner
 echo "# Docker"
 
 eval $(minikube -p minikube docker-env) 
-echo "## Testing Docker ..."
-docker info -f "Docker is ready" || panic
 
 echo "## Building containers ..."
 build nginx # LoadBalancer

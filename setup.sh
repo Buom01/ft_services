@@ -23,7 +23,18 @@ build ()
 	echo ""
 }
 
-echo "# Testing Docker ..."
+echo "# Verifing environement..."
+
+echo "## Detecting cores ..."
+echo "CPU cores found: $(nproc)"
+if [ $(nproc) -eq 1 ]
+then
+	echo "At least 2 cores are needed. Impossible to run."
+	echo "Configure your VM and retry."
+	exit
+fi
+
+echo "## Testing Docker ..."
 docker ps > /dev/null && echo "Docker is working" || docker_issue
 
 echo "# Starting minikube ..."

@@ -17,7 +17,7 @@ spec:
   selector:
     app: nginx
   type: LoadBalancer
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -55,7 +55,7 @@ spec:
   selector:
     app: wordpress
   type: LoadBalancer
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -93,7 +93,7 @@ spec:
   selector:
     app: phpmyadmin
   type: LoadBalancer
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -131,7 +131,18 @@ spec:
   selector:
     app: grafana
   type: LoadBalancer
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-volume
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -153,6 +164,13 @@ spec:
       - name: grafana
         image: buom01/grafana
         imagePullPolicy: Never
+        volumeMounts:
+        - mountPath: /grafana/data
+          name: grafana-volume
+      volumes:
+      - name: grafana-volume
+        persistentVolumeClaim:
+          claimName: grafana-volume
 ---
 apiVersion: v1
 kind: Service
@@ -169,15 +187,13 @@ spec:
   selector:
     app: ftps
   type: LoadBalancer
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: ftps-volume
 spec:
-  storageClassName: ""
-  volumeName: ftps-volume
   accessModes:
   - ReadWriteOnce
   resources:
@@ -227,7 +243,18 @@ spec:
   selector:
     app: mysql
   type: ClusterIP
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-volume
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -249,6 +276,13 @@ spec:
       - name: mysql
         image: buom01/mysql
         imagePullPolicy: Never
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysql-volume
+      volumes:
+      - name: mysql-volume
+        persistentVolumeClaim:
+          claimName: mysql-volume
 ---
 apiVersion: v1
 kind: Service
@@ -265,7 +299,18 @@ spec:
   selector:
     app: influxdb
   type: ClusterIP
-  loadBalancerIP: 10.10.0.0
+  loadBalancerIP: $IP_LB
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: influxdb-volume
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -292,3 +337,10 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: status.hostIP
+        volumeMounts:
+        - mountPath: /var/lib/influxdb
+          name: influxdb-volume
+      volumes:
+      - name: influxdb-volume
+        persistentVolumeClaim:
+          claimName: influxdb-volume

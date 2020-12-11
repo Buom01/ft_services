@@ -7,7 +7,7 @@
   },"1": {
     "doc": "Install in 42's VM",
     "title": "Table of contents",
-    "content": ". | Requirements | Preparation | Launching | Accessing | . ",
+    "content": ". | Requirements | Preparation | Launching | . ",
     "url": "/docs/installation/42vm.html#table-of-contents",
     "relUrl": "/docs/installation/42vm.html#table-of-contents"
   },"2": {
@@ -30,173 +30,161 @@
     "relUrl": "/docs/installation/42vm.html#launching"
   },"5": {
     "doc": "Install in 42's VM",
-    "title": "Accessing",
-    "content": "$ minikube service [servicename] . ",
-    "url": "/docs/installation/42vm.html#accessing",
-    "relUrl": "/docs/installation/42vm.html#accessing"
-  },"6": {
-    "doc": "Install in 42's VM",
     "title": "Install in 42's VM",
     "content": " ",
     "url": "/docs/installation/42vm.html",
     "relUrl": "/docs/installation/42vm.html"
-  },"7": {
+  },"6": {
     "doc": "About",
     "title": "About",
     "content": "This project was made by Bastien Adam (@Buom_01) according to a subject provided by the school. | Github | 42l gitlab | . ",
     "url": "/about/",
     "relUrl": "/about/"
-  },"8": {
+  },"7": {
     "doc": "Welcome",
     "title": "Welcome on Buom_01’s ft_services docs",
     "content": "This project was made at 42 School and aiming to learn to use Kubernetes. Get started . This project was primarly made to work both in 42’s VM. ",
     "url": "/#welcome-on-buom_01s-ft_services-docs",
     "relUrl": "/#welcome-on-buom_01s-ft_services-docs"
-  },"9": {
+  },"8": {
     "doc": "Welcome",
     "title": "Welcome",
     "content": " ",
     "url": "/",
     "relUrl": "/"
-  },"10": {
+  },"9": {
     "doc": "Installation",
     "title": "Installation",
     "content": "This project support both 42’s VM and GNU/Linux . ",
     "url": "/docs/installation/installation.html",
     "relUrl": "/docs/installation/installation.html"
-  },"11": {
+  },"10": {
     "doc": "Memo",
     "title": "Quick memo to get all needed informations",
     "content": " ",
     "url": "/docs/memo.html#quick-memo-to-get-all-needed-informations",
     "relUrl": "/docs/memo.html#quick-memo-to-get-all-needed-informations"
-  },"12": {
+  },"11": {
     "doc": "Memo",
     "title": "Table of contents",
     "content": ". | MySQL credentials | Wordpress . | Login page | Credentials | . | FTPs . | Credentials | . | Grafana credentials | . ",
     "url": "/docs/memo.html#table-of-contents",
     "relUrl": "/docs/memo.html#table-of-contents"
-  },"13": {
+  },"12": {
     "doc": "Memo",
     "title": "MySQL credentials",
     "content": ". | root: changed_password_42 | wordpress: secret_password_42 | . ",
     "url": "/docs/memo.html#mysql-credentials",
     "relUrl": "/docs/memo.html#mysql-credentials"
-  },"14": {
+  },"13": {
     "doc": "Memo",
     "title": "Wordpress",
     "content": "Login page . /wp-login.php . Credentials . | admin: another_secret | Buom_01: kFo$ep#MHl8Vib(DOzk@Z^Y3 | Buom_02: UZJToMrlTddShcF3Z!7huFC&amp; | . ",
     "url": "/docs/memo.html#wordpress",
     "relUrl": "/docs/memo.html#wordpress"
-  },"15": {
+  },"14": {
     "doc": "Memo",
     "title": "FTPs",
     "content": "Note: With only one openned port, it’s should be in active mode. Credentials . | root: changed_password_42 | . ",
     "url": "/docs/memo.html#ftps",
     "relUrl": "/docs/memo.html#ftps"
-  },"16": {
+  },"15": {
     "doc": "Memo",
     "title": "Grafana credentials",
     "content": ". | admin: changed_password_42 | . ",
     "url": "/docs/memo.html#grafana-credentials",
     "relUrl": "/docs/memo.html#grafana-credentials"
-  },"17": {
+  },"16": {
     "doc": "Memo",
     "title": "Memo",
     "content": " ",
     "url": "/docs/memo.html",
     "relUrl": "/docs/memo.html"
-  },"18": {
+  },"17": {
     "doc": "PhpMyAdmin reverse proxy",
     "title": "PhpMyAdmin reverse proxy",
     "content": "/phpmyadmin/ . ",
     "url": "/phpmyadmin/",
     "relUrl": "/phpmyadmin/"
-  },"19": {
+  },"18": {
     "doc": "Quick access",
     "title": "Quick access (redirection and reverse proxy)",
     "content": "This page give you a quick access on wordpress redirection and phpmyadmin reverse proxy which were asked by the subject. ",
     "url": "/quick-access/quick-access.html#quick-access-redirection-and-reverse-proxy",
     "relUrl": "/quick-access/quick-access.html#quick-access-redirection-and-reverse-proxy"
-  },"20": {
+  },"19": {
     "doc": "Quick access",
     "title": "Quick access",
     "content": " ",
     "url": "/quick-access/quick-access.html",
     "relUrl": "/quick-access/quick-access.html"
-  },"21": {
+  },"20": {
     "doc": "Tips and tricks",
     "title": "Tips and tricks",
     "content": " ",
     "url": "/tips-and-tricks.html",
     "relUrl": "/tips-and-tricks.html"
-  },"22": {
+  },"21": {
     "doc": "Tips and tricks",
     "title": "Table of contents",
     "content": ". | See all services access trough minikube proxy | Reset minikube | Debug a pod | . ",
     "url": "/tips-and-tricks.html#table-of-contents",
     "relUrl": "/tips-and-tricks.html#table-of-contents"
-  },"23": {
+  },"22": {
     "doc": "Tips and tricks",
     "title": "See all services access trough minikube proxy",
     "content": "$ minikube service list . ",
     "url": "/tips-and-tricks.html#see-all-services-access-trough-minikube-proxy",
     "relUrl": "/tips-and-tricks.html#see-all-services-access-trough-minikube-proxy"
-  },"24": {
+  },"23": {
     "doc": "Tips and tricks",
     "title": "Reset minikube",
     "content": "$ minikube stop $ minikube delete . ",
     "url": "/tips-and-tricks.html#reset-minikube",
     "relUrl": "/tips-and-tricks.html#reset-minikube"
-  },"25": {
+  },"24": {
     "doc": "Tips and tricks",
     "title": "Debug a pod",
     "content": "$ kubectl exec -ti [POD_NAME] -- ash . ",
     "url": "/tips-and-tricks.html#debug-a-pod",
     "relUrl": "/tips-and-tricks.html#debug-a-pod"
-  },"26": {
+  },"25": {
     "doc": "Install on UNIX",
     "title": "Installation on your host UNIX system",
     "content": " ",
     "url": "/docs/installation/unix.html#installation-on-your-host-unix-system",
     "relUrl": "/docs/installation/unix.html#installation-on-your-host-unix-system"
-  },"27": {
+  },"26": {
     "doc": "Install on UNIX",
     "title": "Table of contents",
-    "content": ". | Requirements | Preparation | Launching | Accessing | . ",
+    "content": ". | Requirements | Preparation | Launching | . ",
     "url": "/docs/installation/unix.html#table-of-contents",
     "relUrl": "/docs/installation/unix.html#table-of-contents"
-  },"28": {
+  },"27": {
     "doc": "Install on UNIX",
     "title": "Requirements",
     "content": ". | At least 2 cores and 4Go+ of RAM | A working UNIX (Linux, MacOS, …) with bash | A working installation of Docker | minikube and kubectl | . ",
     "url": "/docs/installation/unix.html#requirements",
     "relUrl": "/docs/installation/unix.html#requirements"
-  },"29": {
+  },"28": {
     "doc": "Install on UNIX",
     "title": "Preparation",
     "content": ". | Clone the repo | . ",
     "url": "/docs/installation/unix.html#preparation",
     "relUrl": "/docs/installation/unix.html#preparation"
-  },"30": {
+  },"29": {
     "doc": "Install on UNIX",
     "title": "Launching",
     "content": ". | Run ./setup.sh | It may ask to reboot if your user wasn’t in the group docker as it should. | . ",
     "url": "/docs/installation/unix.html#launching",
     "relUrl": "/docs/installation/unix.html#launching"
-  },"31": {
-    "doc": "Install on UNIX",
-    "title": "Accessing",
-    "content": "$ minikube service [servicename] . ",
-    "url": "/docs/installation/unix.html#accessing",
-    "relUrl": "/docs/installation/unix.html#accessing"
-  },"32": {
+  },"30": {
     "doc": "Install on UNIX",
     "title": "Install on UNIX",
     "content": " ",
     "url": "/docs/installation/unix.html",
     "relUrl": "/docs/installation/unix.html"
-  },"33": {
+  },"31": {
     "doc": "Wordpress redirection",
     "title": "Wordpress redirection",
     "content": "/wordpress . ",

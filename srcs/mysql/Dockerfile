@@ -7,10 +7,14 @@ COPY ./wordpress.sql /tmp/
 RUN ash -c "mysqld_safe &" && sleep 10 && \
 	mysql < /tmp/init.sql && \
 	mysql --database=wordpress < /tmp/wordpress.sql && \
-	mysql -e "FLUSH PRIVILEGES;SHUTDOWN;"
+	mysql -e "FLUSH PRIVILEGES;SHUTDOWN;" && \
+	wait
 COPY mariadb-server.cnf /etc/my.cnf.d/mariadb-server.cnf
+RUN mv /var/lib/mysql /var/lib/mysql.init
+
+COPY init.sh /
 
 USER mysql
 VOLUME /var/lib/mysql
 EXPOSE 3306
-CMD mysqld
+CMD /init.sh

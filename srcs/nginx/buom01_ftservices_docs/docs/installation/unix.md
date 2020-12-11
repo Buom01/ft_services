@@ -27,6 +27,3 @@ parent: Installation
 ## Launching
 1. Run `./setup.sh`
 2. It may ask to reboot if your user wasn't in the group `docker` as it should.
-
-## Accessing
-$ `minikube service [servicename]`

@@ -23,8 +23,16 @@ docker_issue ()
 calculate_ip ()
 {
 	export HOST_IP=$(minikube ip)
-	IP_PREFIX=$(echo $HOST_IP | sed -E 's/\.([0-9]+)$//')
-	IP_BEGIN=$(echo $HOST_IP | sed -E 's/.*\.([0-9]+)$/\1 + 1/' | bc)
+	if [ "$HOST_IP" = "127.0.0.1" ]
+	then
+		echo "\`$ minikube ip\` returned \`127.0.0.1\` ! See https://github.com/kubernetes/minikube/issues/7344"
+		echo "Assuming you are using Ubuntu".
+		IP_PREFIX="172.17.0"
+		IP_BEGIN="2"
+	else
+		IP_PREFIX=$(echo $HOST_IP | sed -E 's/\.([0-9]+)$//')
+		IP_BEGIN=$(echo $HOST_IP | sed -E 's/.*\.([0-9]+)$/\1 + 1/' | bc)
+	fi
 	export IP_LB=$IP_PREFIX.$IP_BEGIN
 	export IP_RANGE=$IP_LB-$IP_PREFIX.255
 }

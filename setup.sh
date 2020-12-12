@@ -83,15 +83,15 @@ echo "## Building containers ..."
 echo "### Preparing templates"
 envsubst < srcs/ftps/vsftpd.conf.templ > srcs/ftps/vsftpd.conf~
 
-#build nginx # LoadBalancer
-#build wordpress # LoadBalancer
-#build phpmyadmin # LoadBalancer
-#build grafana # LoadBalancer
+build nginx # LoadBalancer
+build wordpress # LoadBalancer
+build phpmyadmin # LoadBalancer
+build grafana # LoadBalancer
 build ftps # LoadBalancer
 
-#build mysql # ClusterIP
-#build influxdb # ClusterIP
-#build telegraf # ClusterIP
+build mysql # ClusterIP
+build influxdb # ClusterIP
+build telegraf # ClusterIP
 
 echo ""
 echo "# Kubernetes"

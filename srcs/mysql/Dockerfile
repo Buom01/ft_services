@@ -11,6 +11,8 @@ RUN ash -c "mysqld_safe &" && sleep 10 && \
 	wait
 COPY mariadb-server.cnf /etc/my.cnf.d/mariadb-server.cnf
 RUN mv /var/lib/mysql /var/lib/mysql.init
+RUN mkdir /var/lib/mysql
+RUN chown -R mysql /var/lib/mysql /var/lib/mysql.init
 
 COPY init.sh /
 

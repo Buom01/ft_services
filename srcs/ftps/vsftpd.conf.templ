@@ -25,8 +25,13 @@ data_connection_timeout=120
 
 
 seccomp_sandbox=NO
-#connect_from_port_20=YES
+connect_from_port_20=YES
 listen=YES
+pasv_address=$IP_LB
+pasv_enable=Yes
+pasv_min_port=10100
+pasv_max_port=10103
+port_enable=YES
 
 ssl_enable=YES
 #allow_anon_ssl=NO

@@ -180,10 +180,30 @@ metadata:
     metallb.universe.tf/allow-shared-ip: buom01
 spec:
   ports:
+  - name: ftp-data
+    protocol: TCP
+    port: 20
+    targetPort: 20
   - name: ftp
     protocol: TCP
     port: 21
     targetPort: 21
+  - name: ftp-passive0
+    protocol: TCP
+    port: 10100
+    targetPort: 10100
+  - name: ftp-passive1
+    protocol: TCP
+    port: 10101
+    targetPort: 10101
+  - name: ftp-passive2
+    protocol: TCP
+    port: 10102
+    targetPort: 10102
+  - name: ftp-passive3
+    protocol: TCP
+    port: 10103
+    targetPort: 10103
   selector:
     app: ftps
   type: LoadBalancer
@@ -195,7 +215,7 @@ metadata:
   name: ftps-volume
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadOnlyMany 
   resources:
     requests:
       storage: 1Gi

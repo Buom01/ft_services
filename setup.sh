@@ -78,6 +78,7 @@ build ftps # LoadBalancer
 
 build mysql # ClusterIP
 build influxdb # ClusterIP
+build telegraf # ClusterIP
 
 echo ""
 echo "# Kubernetes"

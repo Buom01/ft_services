@@ -333,10 +333,6 @@ spec:
         image: buom01/influxdb
         imagePullPolicy: Never
         env:
-        - name: NODE_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.hostIP
         volumeMounts:
         - mountPath: /var/lib/influxdb
           name: influxdb-volume
@@ -344,3 +340,46 @@ spec:
       - name: influxdb-volume
         persistentVolumeClaim:
           claimName: influxdb-volume
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: telegraf 
+  annotations:
+    metallb.universe.tf/allow-shared-ip: buom01
+spec:
+  ports:
+  - name: telegraf 
+    protocol: TCP
+    port: 8084
+    targetPort: 8084
+  selector:
+    app: telegraf
+  type: ClusterIP
+  loadBalancerIP: $IP_LB
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegraf
+  labels:
+    app: telegraf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telegraf
+  template:
+    metadata:
+      labels:
+        app: telegraf
+    spec:
+      containers:
+      - name: telegraf
+        image: buom01/telegraf
+        imagePullPolicy: Never
+        env:
+        - name: NODE_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP

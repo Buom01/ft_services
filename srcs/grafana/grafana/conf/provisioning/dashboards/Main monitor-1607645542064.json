@@ -542,6 +542,11 @@
           },
           {
             "selected": false,
+            "text": "telegraf",
+            "value": "telegraf"
+          },
+          {
+            "selected": false,
             "text": "storage-provisioner",
             "value": "storage-provisioner"
           },
@@ -591,7 +596,7 @@
             "value": "kube-apiserver"
           }
         ],
-        "query": "influxdb, mysql, ftps, grafana, phpmyadmin, nginx, wordpress, storage-provisioner, coredns, etcd, kubernetes-dashboard, dashboard-metrics-scraper, kube-scheduler, kube-scheduler, kube-proxy, kube-controller-manager, kube-apiserver",
+        "query": "influxdb, mysql, ftps, grafana, phpmyadmin, nginx, wordpress, telegraf, storage-provisioner, coredns, etcd, kubernetes-dashboard, dashboard-metrics-scraper, kube-scheduler, kube-scheduler, kube-proxy, kube-controller-manager, kube-apiserver",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"

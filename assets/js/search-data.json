@@ -1,0 +1,194 @@
+{"0": {
+    "doc": "Install in 42's VM",
+    "title": "Installation on 42’s VM",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/42vm/#installation-on-42s-vm",
+    "relUrl": "/docs/installation/42vm/#installation-on-42s-vm"
+  },"1": {
+    "doc": "Install in 42's VM",
+    "title": "Table of contents",
+    "content": ". | Requirements | Preparation | Launching | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/42vm/#table-of-contents",
+    "relUrl": "/docs/installation/42vm/#table-of-contents"
+  },"2": {
+    "doc": "Install in 42's VM",
+    "title": "Requirements",
+    "content": ". | At least 2 cores and 4Go+ of RAM | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/42vm/#requirements",
+    "relUrl": "/docs/installation/42vm/#requirements"
+  },"3": {
+    "doc": "Install in 42's VM",
+    "title": "Preparation",
+    "content": ". | Ensure you have set core to 2+ | Bootup | Clone the repo | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/42vm/#preparation",
+    "relUrl": "/docs/installation/42vm/#preparation"
+  },"4": {
+    "doc": "Install in 42's VM",
+    "title": "Launching",
+    "content": ". | Run ./setup.sh | It may ask to reboot if your user wasn’t in the group docker as it should. | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/42vm/#launching",
+    "relUrl": "/docs/installation/42vm/#launching"
+  },"5": {
+    "doc": "Install in 42's VM",
+    "title": "Install in 42's VM",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/42vm/",
+    "relUrl": "/docs/installation/42vm/"
+  },"6": {
+    "doc": "About",
+    "title": "About",
+    "content": "This project was made by Bastien Adam (@Buom_01) according to a subject provided by the school. | Github | 42l gitlab | . ",
+    "url": "https://buom01.github.io/ft_services/about/",
+    "relUrl": "/about/"
+  },"7": {
+    "doc": "Welcome",
+    "title": "Welcome on Buom_01’s ft_services docs",
+    "content": "This project was made at 42 School and aiming to learn to use Kubernetes. Get started . This project was primarly made to work both in 42’s VM. ",
+    "url": "https://buom01.github.io/ft_services/#welcome-on-buom_01s-ft_services-docs",
+    "relUrl": "/#welcome-on-buom_01s-ft_services-docs"
+  },"8": {
+    "doc": "Welcome",
+    "title": "Welcome",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/",
+    "relUrl": "/"
+  },"9": {
+    "doc": "Installation",
+    "title": "Installation",
+    "content": "This project support both 42’s VM and GNU/Linux . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/installation/",
+    "relUrl": "/docs/installation/installation/"
+  },"10": {
+    "doc": "Memo",
+    "title": "Quick memo to get all needed informations",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/#quick-memo-to-get-all-needed-informations",
+    "relUrl": "/docs/memo/#quick-memo-to-get-all-needed-informations"
+  },"11": {
+    "doc": "Memo",
+    "title": "Table of contents",
+    "content": ". | MySQL credentials | Wordpress . | Login page | Credentials | . | FTPs . | Credentials | . | Grafana credentials | . ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/#table-of-contents",
+    "relUrl": "/docs/memo/#table-of-contents"
+  },"12": {
+    "doc": "Memo",
+    "title": "MySQL credentials",
+    "content": ". | root: changed_password_42 | wordpress: secret_password_42 | . ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/#mysql-credentials",
+    "relUrl": "/docs/memo/#mysql-credentials"
+  },"13": {
+    "doc": "Memo",
+    "title": "Wordpress",
+    "content": "Login page . /wp-login.php . Credentials . | admin: another_secret | Buom_01: kFo$ep#MHl8Vib(DOzk@Z^Y3 | Buom_02: UZJToMrlTddShcF3Z!7huFC&amp; | . ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/#wordpress",
+    "relUrl": "/docs/memo/#wordpress"
+  },"14": {
+    "doc": "Memo",
+    "title": "FTPs",
+    "content": "Note: With only one openned port, it’s should be in active mode. Credentials . | root: changed_password_42 | . ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/#ftps",
+    "relUrl": "/docs/memo/#ftps"
+  },"15": {
+    "doc": "Memo",
+    "title": "Grafana credentials",
+    "content": ". | admin: changed_password_42 | . ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/#grafana-credentials",
+    "relUrl": "/docs/memo/#grafana-credentials"
+  },"16": {
+    "doc": "Memo",
+    "title": "Memo",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/docs/memo/",
+    "relUrl": "/docs/memo/"
+  },"17": {
+    "doc": "PhpMyAdmin reverse proxy",
+    "title": "PhpMyAdmin reverse proxy",
+    "content": "/phpmyadmin/ . ",
+    "url": "https://buom01.github.io/ft_services/phpmyadmin/",
+    "relUrl": "/phpmyadmin/"
+  },"18": {
+    "doc": "Quick access",
+    "title": "Quick access (redirection and reverse proxy)",
+    "content": "This page give you a quick access on wordpress redirection and phpmyadmin reverse proxy which were asked by the subject. (It aim to be used on the project through the service Nginx) . ",
+    "url": "https://buom01.github.io/ft_services/quick-access/quick-access/#quick-access-redirection-and-reverse-proxy",
+    "relUrl": "/quick-access/quick-access/#quick-access-redirection-and-reverse-proxy"
+  },"19": {
+    "doc": "Quick access",
+    "title": "Quick access",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/quick-access/quick-access/",
+    "relUrl": "/quick-access/quick-access/"
+  },"20": {
+    "doc": "Tips and tricks",
+    "title": "Tips and tricks",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/tips-and-tricks/",
+    "relUrl": "/tips-and-tricks/"
+  },"21": {
+    "doc": "Tips and tricks",
+    "title": "Table of contents",
+    "content": ". | See all services access trough minikube proxy | Reset minikube | Debug a pod | . ",
+    "url": "https://buom01.github.io/ft_services/tips-and-tricks/#table-of-contents",
+    "relUrl": "/tips-and-tricks/#table-of-contents"
+  },"22": {
+    "doc": "Tips and tricks",
+    "title": "See all services access trough minikube proxy",
+    "content": "$ minikube service list . ",
+    "url": "https://buom01.github.io/ft_services/tips-and-tricks/#see-all-services-access-trough-minikube-proxy",
+    "relUrl": "/tips-and-tricks/#see-all-services-access-trough-minikube-proxy"
+  },"23": {
+    "doc": "Tips and tricks",
+    "title": "Reset minikube",
+    "content": "$ minikube stop $ minikube delete . ",
+    "url": "https://buom01.github.io/ft_services/tips-and-tricks/#reset-minikube",
+    "relUrl": "/tips-and-tricks/#reset-minikube"
+  },"24": {
+    "doc": "Tips and tricks",
+    "title": "Debug a pod",
+    "content": "$ kubectl exec -ti [POD_NAME] -- ash . ",
+    "url": "https://buom01.github.io/ft_services/tips-and-tricks/#debug-a-pod",
+    "relUrl": "/tips-and-tricks/#debug-a-pod"
+  },"25": {
+    "doc": "Install on UNIX",
+    "title": "Installation on your host UNIX system",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/unix/#installation-on-your-host-unix-system",
+    "relUrl": "/docs/installation/unix/#installation-on-your-host-unix-system"
+  },"26": {
+    "doc": "Install on UNIX",
+    "title": "Table of contents",
+    "content": ". | Requirements | Preparation | Launching | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/unix/#table-of-contents",
+    "relUrl": "/docs/installation/unix/#table-of-contents"
+  },"27": {
+    "doc": "Install on UNIX",
+    "title": "Requirements",
+    "content": ". | At least 2 cores and 4Go+ of RAM | A working UNIX (Linux, MacOS, …) with bash | A working installation of Docker | minikube and kubectl | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/unix/#requirements",
+    "relUrl": "/docs/installation/unix/#requirements"
+  },"28": {
+    "doc": "Install on UNIX",
+    "title": "Preparation",
+    "content": ". | Clone the repo | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/unix/#preparation",
+    "relUrl": "/docs/installation/unix/#preparation"
+  },"29": {
+    "doc": "Install on UNIX",
+    "title": "Launching",
+    "content": ". | Run ./setup.sh | It may ask to reboot if your user wasn’t in the group docker as it should. | . ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/unix/#launching",
+    "relUrl": "/docs/installation/unix/#launching"
+  },"30": {
+    "doc": "Install on UNIX",
+    "title": "Install on UNIX",
+    "content": " ",
+    "url": "https://buom01.github.io/ft_services/docs/installation/unix/",
+    "relUrl": "/docs/installation/unix/"
+  },"31": {
+    "doc": "Wordpress redirection",
+    "title": "Wordpress redirection",
+    "content": "/wordpress . ",
+    "url": "https://buom01.github.io/ft_services/wordpress",
+    "relUrl": "/wordpress"
+  }
+}

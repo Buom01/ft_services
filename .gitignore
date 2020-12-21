@@ -1,4 +1,4 @@
-*~
-*.swp
-*.swo
-*.vim
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
